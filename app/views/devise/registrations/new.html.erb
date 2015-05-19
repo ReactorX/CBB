@@ -9,15 +9,15 @@
   </div>
 
   <div class="field">
-    <%= f.label :password %>
+    <%= f.label :hasło %>
     <% if @validatable %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <em>(minimum <%= @minimum_password_length %> znaków)</em>
     <% end %><br />
     <%= f.password_field :password, autocomplete: "off" %>
   </div>
 
   <div class="field">
-    <%= f.label :password_confirmation %><br />
+    <%= f.label :Potwierdź_hasło %><br />
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
 
