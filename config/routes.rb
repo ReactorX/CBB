@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get 'uslugi/index'
+
+  get 'wizyty/index'
+
+  get 'pacjenci/index'
+
+  get 'ubezpieczyciele/index'
+
   devise_for :users
   devise_for :installs
   # get 'login/index'

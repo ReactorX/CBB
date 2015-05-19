@@ -1,0 +1,2 @@
+module UbezpieczycieleHelper
+end
