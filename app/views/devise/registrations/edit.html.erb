@@ -1,39 +1,49 @@
-<h2>Edytuj <%= resource_name.to_s.humanize %></h2>
-
+<ol class="breadcrumb">
+<li><%= link_to "Strona Główna", :back %></li>
+<li><a href="#">Edytuj profil</a></li>
+</ol> 
+<div class="panel panel-default">
+<div class="panel-heading"> 
+Edycja profilu: <%= resource_name.to_s.humanize %></div>
+<div class="panel-body"> 
+ <div class="col-lg-6">
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= devise_error_messages! %>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
+  <div class="form-group input-group">                                  
+    <span class="input-group-addon">H:</span>
+    <%= f.email_field :email, autofocus: true, class: "form-control", placeholder: "Podaj adres e-mail" %>
   </div>
 
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :password %> <i>(Pozostaw puste jeśli nie chcesz zmieniać)</i><br />
-    <%= f.password_field :password, autocomplete: "off" %>
+  <div class="form-group input-group">                                  
+    <span class="input-group-addon">H:</span>
+ 
+    <%= f.password_field :password, autocomplete: "off", class: "form-control", placeholder: "Podaj nowe hasło" %>
   </div>
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
+<div class="form-group input-group">                                  
+    <span class="input-group-addon">H:</span>
+    <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control", placeholder: "Powtórz hasło" %>
   </div>
 
-  <div class="field">
-    <%= f.label :current_password %> <i>(Potrzebujemy aktualnego hasła aby zatwierdzić zmiany.)</i><br />
-    <%= f.password_field :current_password, autocomplete: "off" %>
+  <div class="form-group input-group">                                  
+    <span class="input-group-addon">H:</span>
+    <%= f.password_field :current_password, autocomplete: "off", class: "form-control", placeholder: "Podaj swoje aktualne hasło" %>
   </div>
 
   <div class="actions">
-    <%= f.submit "Update" %>
+    <%= f.submit "Edytuj", class: "btn btn-primary" %>
   </div>
 <% end %>
+</div></div></div>
 
-<h3>Usuń moje kontoo</h3>
+<div class="panel panel-default">
+<div class="panel-heading"> Usuń moje konto</div>
 
-<p>Niezadowolony? <%= button_to "Usuń moje konto", registration_path(resource_name), data: { confirm: "Czy jesteś pewien?" }, method: :delete %></p>
+<p>Możesz usunąć swoje konto, ale pamiętaj, że ta zmiana jest nieodwracalna! <%= button_to "Usuń moje konto", registration_path(resource_name), data: { confirm: "Czy jesteś pewien?" }, method: :delete, class: "btn btn-primary" %></p>
+</div></div>
 
-<%= link_to "Wstecz", :back %>

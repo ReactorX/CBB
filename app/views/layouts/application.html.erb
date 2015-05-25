@@ -5,15 +5,153 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+  <link href="/app/assets/stylesheets/morris-0.4.3.min.css" rel="stylesheet" />
 </head>
 <body>
+  <div id="wrapper">
+<nav class="navbar navbar-default navbar-cls-top " role="navigation" style="margin-bottom: 0; border:1px solid #202020; background:#202020;">
+ 
+        
+  <div style="color: white;
+padding: 15px 10px 5px 10px;
+float: right;
+font-size: 16px;">  
+
+
+<% if user_signed_in? %>
+  Zalogowany jako <strong><%= current_user.email %></strong>.
+  <%= link_to 'Edytuj profil', edit_user_registration_path, :class => 'btn btn-danger square-btn-adjust' %>
+  <%= link_to "Wyloguj", destroy_user_session_path, method: :delete, :class => 'btn btn-danger square-btn-adjust'  %>
+  
+<% else %>
+  <%= link_to "Zarejestruj", new_user_registration_path, :class => 'btn btn-danger square-btn-adjust'  %>
+  <%= link_to "Zaloguj", new_user_session_path, :class => 'btn btn-danger square-btn-adjust'  %>
+<% end %>
+
+</div>
+        </nav>
+                <nav class="navbar-default navbar-side"  style="background:#202020;" role="navigation">
+            <div class="sidebar-collapse">
+				
+            <% if user_signed_in? %>
+                <ul class="nav" id="main-menu">
+
+
+
+                    <li>
+                        <a class="active-menu"  href="index.html"><i class="fa fa-dashboard fa-3x"></i> Dashboard</a>
+                    </li>
+  					<li>
+                        <a  href="index.html"><i class="fa fa-eyedropper fa-3x"></i> Ubezpieczyciele</a>
+                    </li>
+
+					<li>
+                        <a href="#"><i class="fa fa-users fa-3x"></i> Pacjenci<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a style="margin-left:10px;" href="#"><i class="fa fa-caret-right"></i>
+Zarejestruj Pacjenta</a>
+                            </li>
+                            <li>
+                                <a style="margin-left:10px;"  href="#"><i class="fa fa-caret-right"></i>
+Wyszukaj Pacjenta</a>
+                            </li>
+                        </ul>
+                     </li>
+
+                    <li>
+                        <a href="#"><i class="fa fa-heartbeat fa-3x"></i> Wizyty<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a style="margin-left:10px;"  href="#"><i class="fa fa-caret-right"></i>
+Umówione wizyty</a>
+                            </li>
+                            <li>
+                                <a style="margin-left:10px;"  href="#"><i class="fa fa-caret-right"></i>
+Rozlicz wizyty</a>
+                            </li>
+                            <li>
+                                <a style="margin-left:10px;"  href="#"><i class="fa fa-caret-right"></i>
+Dodaj...<span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li>
+                                        <a style="margin-left:15px;"  href="#">Usługę lekarską</a>
+                                    </li>
+                                    <li>
+                                        <a style="margin-left:15px;"  href="#">Kategorię usługi</a>
+                                    </li>
+                                    <li>
+                                        <a style="margin-left:15px;"  href="#">Nową klinikę</a>
+                                    </li>
+
+                                </ul>
+
+                            </li>
+                         </ul>
+                         </li>
+
+                            <li>
+                        <a  href="index.html"><i class="fa fa-laptop fa-3x"></i> Archiwum wizyt</a>
+                    		</li>
+                    		<li>
+                        <a href="#"><i class="fa fa-key fa-3x"></i> Administracja<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a style="margin-left:10px;"  href="#"><i class="fa fa-caret-right"></i>
+Dodaj pracownika</a>
+                            </li>
+                            <li>
+                                <a style="margin-left:10px;"  href="#"><i class="fa fa-caret-right"></i>
+Dodaj lekarza</a>
+                            </li>
+                        </ul>
+                     </li>
+                        </ul>
+                      </li>
+                 
+                </ul>
+				<% end -%> 
+            </div>
+
+        </nav>
+        <!-- /. NAV SIDE  -->
+        <div id="page-wrapper" >
+            <div id="page-inner">
+
+
+                <div class="row">
+<div class="col-md-12 col-sm-6 col-xs-6">
 <% if notice %>
-  <p class="alert alert-success"><%= notice %></p>
+  <p class="alert alert-success alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button><%= notice %></p>
 <% end %>
 <% if alert %>
-  <p class="alert alert-danger"><%= alert %></p>
+  <p class="alert alert-danger alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button><%= alert %></p>
 <% end %>
 <%= yield %>
+ </div>
+    
+
+ </div>
+    </div>
+             <!-- /. PAGE INNER  -->
+            </div>
+         <!-- /. PAGE WRAPPER  -->
+        </div>
+     <!-- /. WRAPPER  -->
+    <!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->
+    <!-- JQUERY SCRIPTS -->
+
+    <!-- METISMENU SCRIPTS -->
+    <script src="/app/assets/javasctipt/jquery.metisMenu.js"></script>
+     <!-- MORRIS CHART SCRIPTS -->
+     <script src="/app/assets/javascript/raphael-2.1.0.min.js"></script>
+    <script src="/app/assets/javascript/morris.js"></script>
+      <!-- CUSTOM SCRIPTS -->
+    <script src="/app/assets/javascript/custom.js"></script>
+
 
 </body>
 </html>

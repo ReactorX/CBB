@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :models
   get 'uslugi/index'
 
   get 'wizyty/index'
