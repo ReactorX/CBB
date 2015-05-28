@@ -11,23 +11,27 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name_clinic %><br>
-    <%= f.text_field :name_clinic %>
+
+ <div class="form-group input-group">                                  
+    <span class="input-group-addon">Nazwa kliniki</span>
+    <%= f.text_field :name_clinic, class: "form-control"  %>
   </div>
-  <div class="field">
-    <%= f.label :adress_clinic %><br>
-    <%= f.text_field :adress_clinic %>
+
+ <div class="form-group input-group">                                  
+    <span class="input-group-addon">Adres kliniki</span>
+    <%= f.text_field :adress_clinic, class: "form-control"  %>
   </div>
-  <div class="field">
-    <%= f.label :zip_code_clinic %><br>
-    <%= f.text_field :zip_code_clinic %>
+
+ <div class="form-group input-group">                                  
+    <span class="input-group-addon">Kod ZIP kliniki</span>
+    <%= f.text_field :zip_code_clinic, class: "form-control"  %>
   </div>
-  <div class="field">
-    <%= f.label :city_linic %><br>
-    <%= f.text_field :city_linic %>
+
+ <div class="form-group input-group">                                  
+    <span class="input-group-addon">Miasto</span>
+    <%= f.text_field :city_linic, class: "form-control" %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'Edytuj', class: "btn btn-primary" %>
   </div>
 <% end %>

@@ -1,6 +1,12 @@
-<h1>Editing Content Clinic</h1>
+<div class="panel panel-default">
+<div class="panel-heading"> 
+Edytuj klinikę</div>
+<div class="panel-body"> 
+ <div class="col-lg-6">
 
 <%= render 'form' %>
-
-<%= link_to 'Show', @content_clinic %> |
-<%= link_to 'Back', content_clinics_path %>
+</div></div>
+<div class="panel-footer">
+<%= link_to 'Pokaż', @content_clinic, class:"btn btn-success" %> 
+<%= link_to 'Wróć', content_clinics_path, class:"btn btn-info" %>
+</div></div>
