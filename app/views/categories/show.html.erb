@@ -1,11 +1,22 @@
-<p id="notice"><%= notice %></p>
+<div class="panel panel-default">
+<div class="panel-heading"> 
+Wyedytowano dane</div>
+<div class="panel-body"> 
+ <div class="col-lg-6">
+<table class="table table-condensed">
+<thead>
+<tr>
+<th>Nazwa kategorii</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+ <td> <%= @category.name_category %> </td>
+</tr> 
+</tbody>
+</table>
 
-
-
-<p>
-  <strong>Name category:</strong>
-  <%= @category.name_category %>
-</p>
-
-<%= link_to 'Edit', edit_category_path(@category) %> |
-<%= link_to 'Back', categories_path %>
+<%= link_to 'Edytuj', edit_category_path(@category), class:"btn btn-success" %> 
+<%= link_to 'Wróć', categories_path, class:"btn btn-info" %>
+</div>
+</div>

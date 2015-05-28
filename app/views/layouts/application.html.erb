@@ -8,7 +8,7 @@
   <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
-  <link href="/app/assets/stylesheets/morris-0.4.3.min.css" rel="stylesheet" />
+  <%= stylesheet_link_tag "morris-0.4.3.min", "dataTablesbootstrap" %>
 </head>
 <body>
   <div id="wrapper">
@@ -35,6 +35,7 @@ font-size: 16px;">
         </nav>
                 <nav class="navbar-default navbar-side"  style="background:#202020;" role="navigation">
             <div class="sidebar-collapse">
+        <img width="250" src="/images/logo-przychodnia.png"/><BR><BR>
 				
             <% if user_signed_in? %>
                 <ul class="nav" id="main-menu">
@@ -42,16 +43,13 @@ font-size: 16px;">
 
 
                     <li>
-                        <a class="active-menu"  href=""><i class="fa fa-dashboard fa-3x"></i> Dashboard</a>
-                      
 
-
-
-
+                        <a class="active-menu"  href="/"><i class="fa fa-dashboard fa-3x"></i> Dashboard</a>
 
                     </li>
+                   
   					<li>
-                        <a  href="index.html"><i class="fa fa-eyedropper fa-3x"></i> Ubezpieczyciele</a>
+                        <a  href="insurers"><i class="fa fa-eyedropper fa-3x"></i> Ubezpieczyciele</a>
                     </li>
 
 					<li>
@@ -87,10 +85,10 @@ Dodaj...<span class="fa arrow"></span></a>
                                         <a style="margin-left:15px;"  href="#">Usługę lekarską</a>
                                     </li>
                                     <li>
-                                        <a style="margin-left:15px;"  href="#">Kategorię usługi</a>
+                                        <a style="margin-left:15px;"  href="/categories">Kategorię usługi</a>
                                     </li>
                                     <li>
-                                        <a style="margin-left:15px;"  href="#">Nową klinikę</a>
+                                        <a style="margin-left:15px;"  href="/content_clinics">Nową klinikę</a>
                                     </li>
 
                                 </ul>
@@ -110,7 +108,11 @@ Dodaj...<span class="fa arrow"></span></a>
 Dodaj pracownika</a>
                             </li>
                             <li>
-                                <a style="margin-left:10px;"  href="#"><i class="fa fa-caret-right"></i>
+                                <a style="margin-left:10px;"  href="/positions"><i class="fa fa-caret-right"></i>
+Dodaj kategorię pracownika</a>
+                            </li>
+                            <li>
+                                <a style="margin-left:10px;"  href="/doctors"><i class="fa fa-caret-right"></i>
 Dodaj lekarza</a>
                             </li>
                         </ul>
@@ -156,8 +158,15 @@ Dodaj lekarza</a>
      <script src="/app/assets/javascript/raphael-2.1.0.min.js"></script>
     <script src="/app/assets/javascript/morris.js"></script>
       <!-- CUSTOM SCRIPTS -->
-    <script src="/app/assets/javascript/custom.js"></script>
+    <script src="/app/assets/javascript/custom.js"></script>>
+    <%= javascript_include_tag "dataTablesbootstrap", "jquerydataTables", "morris", "raphael-2.1.0.min",
+    "jquerymetisMenu" %>
 
+        <script>
+            $(document).ready(function () {
+                $('#dataTables-example').dataTable();
+            });
+    </script>
 
 </body>
 </html>

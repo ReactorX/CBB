@@ -11,23 +11,23 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name_insurer %><br>
-    <%= f.text_field :name_insurer %>
+ <div class="form-group input-group">                                  
+    <span class="input-group-addon">Nazwa ubezpieczyciela</span>
+    <%= f.text_field :name_insurer, class: "form-control" %>
   </div>
-  <div class="field">
-    <%= f.label :adress %><br>
-    <%= f.text_field :adress %>
+   <div class="form-group input-group">                                  
+    <span class="input-group-addon">Adres placówki</span>
+    <%= f.text_field :adress, class: "form-control" %>
   </div>
-  <div class="field">
-    <%= f.label :zip_code_insurer %><br>
-    <%= f.text_field :zip_code_insurer %>
+   <div class="form-group input-group">                                  
+    <span class="input-group-addon">Kod ZIP ubezpieczyciela</span>
+    <%= f.text_field :zip_code_insurer, class: "form-control" %>
   </div>
-  <div class="field">
-    <%= f.label :city_insurer %><br>
-    <%= f.text_field :city_insurer %>
+   <div class="form-group input-group">                                  
+    <span class="input-group-addon">Miasto placówki</span>
+    <%= f.text_field :city_insurer, class: "form-control" %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Edytuj", class: "btn btn-primary" %>
   </div>
 <% end %>
