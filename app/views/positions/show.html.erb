@@ -1,9 +1,30 @@
-<p id="notice"><%= notice %></p>
+<ol class="breadcrumb">
+<li><%= link_to "Strona Główna", '/' %></li>
+<li><%= link_to "lista stanowisk", '/positions' %></li>
+<li><%= link_to "Wyedytowane dane", '' %></li>
+</ol> 
+<div class="panel panel-default">
+<div class="panel-heading"> 
+Wyedytowano dane</div>
+<div class="panel-body"> 
 
-<p>
-  <strong>Position:</strong>
+<table class="table table-condensed">
+<thead>
+<tr>
+<th>Nazwa stanowiska</th>
+
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
   <%= @position.position %>
-</p>
-
-<%= link_to 'Edit', edit_position_path(@position) %> |
-<%= link_to 'Back', positions_path %>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="panel-footer">
+<%= link_to 'Edytuj', edit_position_path(@position), class:"btn btn-success"  %> 
+<%= link_to 'Wróć', positions_path, class:"btn btn-info" %>
+</div></div>

@@ -1,5 +1,16 @@
-<h1>New Position</h1>
+<ol class="breadcrumb">
+<li><%= link_to "Strona Główna", '/' %></li>
+<li><%= link_to "lista stanowisk", '/positions' %></li>
+<li><%= link_to "Dodaj nowe stanowisko", '' %></li>
+</ol> 
+<div class="panel panel-default">
+<div class="panel-heading"> 
+Edytuj stanowisko</div>
+<div class="panel-body"> 
+ <div class="col-lg-6">
 
 <%= render 'form' %>
-
-<%= link_to 'Back', positions_path %>
+</div></div>
+<div class="panel-footer">
+<%= link_to 'Wróć', positions_path, class:"btn btn-info" %>
+</div></div>

@@ -1,3 +1,8 @@
+<ol class="breadcrumb">
+<li><%= link_to "Strona Główna", '/' %></li>
+<li><a href="/doctors">lista lekarzy</a></li>
+<li><a href="">Edytuj lekarza</a></li>
+</ol> 
 <div class="panel panel-default">
 <div class="panel-heading"> 
 Edytuj lekarza</div>
@@ -5,8 +10,8 @@ Edytuj lekarza</div>
  <div class="col-lg-6">
 
 <%= render 'form' %>
-
-<%= link_to 'Show', @doctor , class:"btn btn-success" %> 
-<%= link_to 'Back', doctors_path, class:"btn btn-info" %>
+</div></div><div class="panel-footer">
+<%= link_to 'Pokaż', @doctor , class:"btn btn-success" %> 
+<%= link_to 'Wróć', doctors_path, class:"btn btn-info" %>
 </div>
 </div>
