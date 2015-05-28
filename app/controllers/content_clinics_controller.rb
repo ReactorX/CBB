@@ -28,7 +28,7 @@ class ContentClinicsController < ApplicationController
 
     respond_to do |format|
       if @content_clinic.save
-        format.html { redirect_to @content_clinic, notice: 'Content clinic was successfully created.' }
+        format.html { redirect_to @content_clinic, notice: 'Klinika została pomyślnie dodana.' }
         format.json { render :show, status: :created, location: @content_clinic }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class ContentClinicsController < ApplicationController
   def update
     respond_to do |format|
       if @content_clinic.update(content_clinic_params)
-        format.html { redirect_to @content_clinic, notice: 'Content clinic was successfully updated.' }
+        format.html { redirect_to @content_clinic, notice: 'Klinika została pomyślnie zaktualizowana.' }
         format.json { render :show, status: :ok, location: @content_clinic }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class ContentClinicsController < ApplicationController
   def destroy
     @content_clinic.destroy
     respond_to do |format|
-      format.html { redirect_to content_clinics_url, notice: 'Content clinic was successfully destroyed.' }
+      format.html { redirect_to content_clinics_url, notice: 'Klinika została usunięta.' }
       format.json { head :no_content }
     end
   end

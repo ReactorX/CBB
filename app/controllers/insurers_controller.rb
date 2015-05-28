@@ -28,7 +28,7 @@ class InsurersController < ApplicationController
 
     respond_to do |format|
       if @insurer.save
-        format.html { redirect_to @insurer, notice: 'Insurer was successfully created.' }
+        format.html { redirect_to @insurer, notice: 'Ubezpieczyciel został pomyślnie dodany.' }
         format.json { render :show, status: :created, location: @insurer }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class InsurersController < ApplicationController
   def update
     respond_to do |format|
       if @insurer.update(insurer_params)
-        format.html { redirect_to @insurer, notice: 'Insurer was successfully updated.' }
+        format.html { redirect_to @insurer, notice: 'Ubezpieczyciel został pomyślnie zaktualizowany.' }
         format.json { render :show, status: :ok, location: @insurer }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class InsurersController < ApplicationController
   def destroy
     @insurer.destroy
     respond_to do |format|
-      format.html { redirect_to insurers_url, notice: 'Insurer was successfully destroyed.' }
+      format.html { redirect_to insurers_url, notice: 'Ubezpieczyciel został pomyślnie usunięty.' }
       format.json { head :no_content }
     end
   end
