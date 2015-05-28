@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<%= link_to 'Dodaj nowego lekarza', new_insurer_path %>
+<table>
+  <thead>
+    <tr>
+      <th>Name insurer</th>
+      <th>Adress</th>
+      <th>Zip code insurer</th>
+      <th>City insurer</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @insurers.each do |insurer| %>
+      <tr>
+        <td><%= insurer.name_insurer %></td>
+        <td><%= insurer.adress %></td>
+        <td><%= insurer.zip_code_insurer %></td>
+        <td><%= insurer.city_insurer %></td>
+        <td><%= link_to 'Show', insurer %></td>
+        <td><%= link_to 'Edit', edit_insurer_path(insurer) %></td>
+        <td><%= link_to 'Destroy', insurer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+

@@ -1,13 +1,19 @@
 Rails.application.routes.draw do
+  resources :insurers
+  resources :content_clinics
+  resources :positions
+  resources :doctors
+  resources :categories
   resources :models
   get 'uslugi/index'
 
   get 'wizyty/index'
-
-  get 'pacjenci/index'
-
+  get 'content_clinics/index'
+  get 'doctors/index'
+  get 'position/index'
+  get 'insurers/index'
   get 'ubezpieczyciele/index'
-
+  get 'categories/index'
   devise_for :users
   devise_for :installs
   # get 'login/index'
@@ -17,6 +23,7 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
    root 'login#index'
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name_clinic: MyString
+  adress_clinic: MyString
+  zip_code_clinic: MyString
+  city_linic: MyString
+
+two:
+  name_clinic: MyString
+  adress_clinic: MyString
+  zip_code_clinic: MyString
+  city_linic: MyString

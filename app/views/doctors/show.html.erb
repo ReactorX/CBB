@@ -1,0 +1,19 @@
+<table class="table table-condensed">
+<thead>
+<tr>
+<th>Numer PWZ</th>
+<th>Imię</th>
+<th>Nazwisko</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><%= @doctor.pwz_number %></td>
+<td><%= @doctor.name %></td>
+<td><%= @doctor.surname %></td>
+</tr> 
+</tbody>
+</table>
+
+<%= link_to 'Edytuj', edit_doctor_path(@doctor), class:"btn btn-success" %>
+<%= link_to 'Powrót na stronę główną', doctors_path, class:"btn btn-info" %>

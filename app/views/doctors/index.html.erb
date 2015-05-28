@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<ol class="breadcrumb">
+<li><%= link_to "Strona Główna", :back %></li>
+<li><a href="#">Lista lekarzy</a></li>
+</ol> 
+<%= link_to 'Dodaj nowego lekarza', new_doctor_path, class: "btn btn-primary" %>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Numer PWZ Lekarza</th>
+      <th>Imię lekarza</th>
+      <th>Nazwisko lekarza</th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @doctors.each do |doctor| %>
+      <tr>
+        <td><%= doctor.pwz_number %></td>
+        <td><%= doctor.name %></td>
+        <td><%= doctor.surname %></td>
+        <td><%= link_to 'Edit', edit_doctor_path(doctor), class:"btn btn-success"  %> <%= link_to 'Destroy', doctor, method: :delete, data: { confirm: 'Jesteś pewien?' },class:"btn btn-danger" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+

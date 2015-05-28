@@ -1,0 +1,14 @@
+<ol class="breadcrumb">
+<li><%= link_to "Strona Główna", :back %></li>
+<li><a href="#">Dodaj nowego lekarza</a></li>
+</ol> 
+<div class="panel panel-default">
+<div class="panel-heading"> 
+Dodaj nowego lekarza</div>
+<div class="panel-body"> 
+ <div class="col-lg-6">
+
+<%= render 'form' %>
+
+<%= link_to 'Back', doctors_path %>
+</div></div>

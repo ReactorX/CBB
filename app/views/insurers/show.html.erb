@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name insurer:</strong>
+  <%= @insurer.name_insurer %>
+</p>
+
+<p>
+  <strong>Adress:</strong>
+  <%= @insurer.adress %>
+</p>
+
+<p>
+  <strong>Zip code insurer:</strong>
+  <%= @insurer.zip_code_insurer %>
+</p>
+
+<p>
+  <strong>City insurer:</strong>
+  <%= @insurer.city_insurer %>
+</p>
+
+<%= link_to 'Edit', edit_insurer_path(@insurer) %> |
+<%= link_to 'Back', insurers_path %>
