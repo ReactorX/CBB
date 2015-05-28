@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   get 'wizyty/index'
   get 'content_clinics/index'
   get 'doctors/index'
-  get 'position/index'
+  get 'positions/index'
   get 'insurers/index'
   get 'ubezpieczyciele/index'
   get 'categories/index'

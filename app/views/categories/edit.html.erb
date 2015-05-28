@@ -1,6 +1,11 @@
-<h1>Editing Category</h1>
+<div class="panel panel-default">
+<div class="panel-heading"> 
+Edytuj kategorię</div>
+<div class="panel-body"> 
+ <div class="col-lg-6">
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @category %> |
-<%= link_to 'Back', categories_path %>
+<%= link_to 'Show', @category, class:"btn btn-success" %> 
+<%= link_to 'Back', categories_path, class:"btn btn-info" %>
+</div></div>

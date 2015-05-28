@@ -12,11 +12,13 @@
   <% end %>
 
  
-  <div class="field">
-    <%= f.label :name_category %><br>
-    <%= f.text_field :name_category %>
+ 
+ <div class="form-group input-group">                                  
+    <span class="input-group-addon">Nazwa kategorii</span>
+  
+    <%= f.text_field :name_category, class: "form-control" %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Edytuj", class: "btn btn-primary"  %>
   </div>
 <% end %>

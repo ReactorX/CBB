@@ -1,24 +1,42 @@
-<p id="notice"><%= notice %></p>
+<div class="panel panel-default">
+<div class="panel-heading"> 
+Wyedytowano dane</div>
+<div class="panel-body"> 
+ <div class="col-lg-6">
+<table class="table table-condensed">
+<thead>
+<tr>
+<th>Nazwa firmy ubezpieczającej</th>
+<th>Adres</th>
+<th>Kod ZIP firmy</th>
+<th>Miasto</th>
+</tr>
+</thead>
+<tbody>
 
-<p>
-  <strong>Name insurer:</strong>
+<td>
+
   <%= @insurer.name_insurer %>
-</p>
+</td>
 
-<p>
-  <strong>Adress:</strong>
+<td>
+
   <%= @insurer.adress %>
-</p>
+</td>
 
-<p>
-  <strong>Zip code insurer:</strong>
+<td>
+ 
   <%= @insurer.zip_code_insurer %>
-</p>
+</td>
+<td>
 
-<p>
-  <strong>City insurer:</strong>
   <%= @insurer.city_insurer %>
-</p>
+</td>
 
-<%= link_to 'Edit', edit_insurer_path(@insurer) %> |
-<%= link_to 'Back', insurers_path %>
+</tr> 
+</tbody>
+</table>
+
+<%= link_to 'Edit', edit_insurer_path(@insurer), class:"btn btn-success" %> 
+<%= link_to 'Back', insurers_path, class:"btn btn-info" %>
+</div></div>
