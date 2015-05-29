@@ -348,7 +348,7 @@
 		 * sZeroRecords - assuming that is given.
 		 */
 		if ( !oLanguage.sEmptyTable && zeroRecords &&
-			oDefaults.sEmptyTable === "No data available in table" )
+			oDefaults.sEmptyTable === "Brak danych do wyświetlenia" )
 		{
 			_fnMap( oLanguage, oLanguage, 'sZeroRecords', 'sEmptyTable' );
 		}
@@ -10571,7 +10571,7 @@
 			 *      } );
 			 *    } );
 			 */
-			"sEmptyTable": "No data available in table",
+			"sEmptyTable": "Brak danych do wyświetlenia",
 	
 	
 			/**
