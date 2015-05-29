@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Pesel:</strong>
+  <%= @patient.pesel %>
+</p>
+
+<p>
+  <strong>Name patient:</strong>
+  <%= @patient.name_patient %>
+</p>
+
+<p>
+  <strong>Firstname patient:</strong>
+  <%= @patient.firstname_patient %>
+</p>
+
+<p>
+  <strong>Adress:</strong>
+  <%= @patient.adress %>
+</p>
+
+<p>
+  <strong>City patient:</strong>
+  <%= @patient.city_patient %>
+</p>
+
+<p>
+  <strong>Zip code patient:</strong>
+  <%= @patient.zip_code_patient %>
+</p>
+
+<p>
+  <strong>Phone patient:</strong>
+  <%= @patient.phone_patient %>
+</p>
+
+<p>
+  <strong>Patient card nr:</strong>
+  <%= @patient.patient_card_nr %>
+</p>
+
+<p>
+  <strong>Icd10code:</strong>
+  <%= @patient.ICD10code %>
+</p>
+
+<p>
+  <strong>Id insurer:</strong>
+  <%= @patient.id_insurer %>
+</p>
+
+<%= link_to 'Edit', edit_patient_path(@patient) %> |
+<%= link_to 'Back', patients_path %>

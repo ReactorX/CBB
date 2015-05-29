@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  pese: 1
+  name_patient: MyString
+  firstname_patient: MyString
+  adress: MyString
+  city_patient: 
+  zip_code_patient: MyString
+  phone_patient: MyString
+  patient_card_nr: 1
+  ICD10code: MyString
+  id_insurer: 1
+
+two:
+  pese: 1
+  name_patient: MyString
+  firstname_patient: MyString
+  adress: MyString
+  city_patient: 
+  zip_code_patient: MyString
+  phone_patient: MyString
+  patient_card_nr: 1
+  ICD10code: MyString
+  id_insurer: 1

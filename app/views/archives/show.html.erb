@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Id appointments:</strong>
+  <%= @archive.id_appointments %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @archive.state %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @archive.date %>
+</p>
+
+<%= link_to 'Edit', edit_archive_path(@archive) %> |
+<%= link_to 'Back', archives_path %>

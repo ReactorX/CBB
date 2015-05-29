@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name services:</strong>
+  <%= @service.name_services %>
+</p>
+
+<p>
+  <strong>Company price:</strong>
+  <%= @service.company_price %>
+</p>
+
+<p>
+  <strong>Doctor price:</strong>
+  <%= @service.doctor_price %>
+</p>
+
+<p>
+  <strong>Date in:</strong>
+  <%= @service.date_in %>
+</p>
+
+<p>
+  <strong>Date out:</strong>
+  <%= @service.date_out %>
+</p>
+
+<%= link_to 'Edit', edit_service_path(@service) %> |
+<%= link_to 'Back', services_path %>

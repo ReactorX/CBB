@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id_clinic: 1
+  id_user: 1
+  id_patient: 1
+  id_services: MyString
+  data: 2015-05-29
+  id_doctor: 1
+
+two:
+  id_clinic: 1
+  id_user: 1
+  id_patient: 1
+  id_services: MyString
+  data: 2015-05-29
+  id_doctor: 1

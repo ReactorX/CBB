@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+
+  resources :services
+  resources :archives
+  resources :appointments
+  resources :service
+  resources :patients
   resources :insurers
   resources :content_clinics
   resources :positions
@@ -6,7 +12,7 @@ Rails.application.routes.draw do
   resources :categories
   resources :models
   get 'uslugi/index'
-
+  get 'service/index'
   get 'wizyty/index'
   get 'content_clinics/index'
   get 'doctors/index'
@@ -14,6 +20,7 @@ Rails.application.routes.draw do
   get 'insurers/index'
   get 'ubezpieczyciele/index'
   get 'categories/index'
+
   devise_for :users
   devise_for :installs
   # get 'login/index'

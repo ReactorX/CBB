@@ -11,7 +11,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150528155308) do
+ActiveRecord::Schema.define(version: 20150529053959) do
+
+  create_table "appointments", force: :cascade do |t|
+    t.integer  "id_clinic",   limit: 4
+    t.integer  "id_user",     limit: 4
+    t.integer  "id_patient",  limit: 4
+    t.string   "id_services", limit: 255
+    t.date     "data"
+    t.integer  "id_doctor",   limit: 4
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+  end
+
+  create_table "archives", force: :cascade do |t|
+    t.integer  "id_appointments", limit: 4
+    t.integer  "state",           limit: 4
+    t.date     "date"
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+  end
 
   create_table "categories", force: :cascade do |t|
     t.string   "name_category", limit: 255
@@ -68,10 +87,37 @@ ActiveRecord::Schema.define(version: 20150528155308) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "patients", force: :cascade do |t|
+    t.integer  "pesel",             limit: 4
+    t.string   "name_patient",      limit: 255
+    t.string   "firstname_patient", limit: 255
+    t.string   "adress",            limit: 255
+    t.string   "city_patient",      limit: 255
+    t.string   "zip_code_patient",  limit: 255
+    t.string   "phone_patient",     limit: 255
+    t.integer  "patient_card_nr",   limit: 4
+    t.string   "ICD10code",         limit: 255
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
+    t.integer  "insurer_id",        limit: 4
+  end
+
+  add_index "patients", ["insurer_id"], name: "my_foreign_key", using: :btree
+
   create_table "positions", force: :cascade do |t|
     t.string   "position",   limit: 255
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
+  end
+
+  create_table "services", force: :cascade do |t|
+    t.string   "name_services", limit: 255
+    t.string   "company_price", limit: 255
+    t.string   "doctor_price",  limit: 255
+    t.date     "date_in"
+    t.date     "date_out"
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
   end
 
   create_table "users", force: :cascade do |t|
@@ -92,4 +138,5 @@ ActiveRecord::Schema.define(version: 20150528155308) do
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
+  add_foreign_key "patients", "insurers", name: "my_foreign_key"
 end
