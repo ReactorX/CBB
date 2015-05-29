@@ -48,8 +48,8 @@
     <%= f.text_field :ICD10code %>
   </div>
   <div class="field">
-  
-    <%= f.select :insurers, :collections => insurers.pluck(:id) %>
+    <%= f.collection_select(:insurer_id, Insurer.all, :id, :name_insurer) %>
+    <%#= f.select :insurer_id %>
   </div>
   <div class="actions">
     <%= f.submit %>

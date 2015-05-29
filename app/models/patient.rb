@@ -1,3 +1,3 @@
 class Patient < ActiveRecord::Base
-	belongs_to :insurers
+	belongs_to :insurer
 end
