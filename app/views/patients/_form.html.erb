@@ -1,3 +1,4 @@
+
 <%= form_for(@patient) do |f| %>
   <% if @patient.errors.any? %>
     <div id="error_explanation">
@@ -12,31 +13,31 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :pesel %><br>
+    <%= f.label :Pesel %><br>
     <%= f.number_field :pesel %>
   </div>
   <div class="field">
-    <%= f.label :name_patient %><br>
+    <%= f.label :Imię_pacjenta %><br>
     <%= f.text_field :name_patient %>
   </div>
   <div class="field">
-    <%= f.label :firstname_patient %><br>
+    <%= f.label :Nazwisko_pacjenta %><br>
     <%= f.text_field :firstname_patient %>
   </div>
   <div class="field">
-    <%= f.label :adress %><br>
+    <%= f.label :Adres %><br>
     <%= f.text_field :adress %>
   </div>
   <div class="field">
-    <%= f.label :city_patient %><br>
+    <%= f.label :Miasto_pacjenta %><br>
     <%= f.text_field :city_patient %>
   </div>
   <div class="field">
-    <%= f.label :zip_code_patient %><br>
+    <%= f.label :Kod_pocztowy_pacjenta %><br>
     <%= f.text_field :zip_code_patient %>
   </div>
   <div class="field">
-    <%= f.label :phone_patient %><br>
+    <%= f.label :Telefon_pacjenta %><br>
     <%= f.text_field :phone_patient %>
   </div>
   <div class="field">
@@ -44,7 +45,7 @@
     <%= f.number_field :patient_card_nr %>
   </div>
   <div class="field">
-    <%= f.label :ICD10code %><br>
+    <%= f.label :Kod_ICD10 %><br>
     <%= f.text_field :ICD10code %>
   </div>
   <div class="field">

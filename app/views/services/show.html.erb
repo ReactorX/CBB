@@ -1,17 +1,17 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name services:</strong>
+  <strong>Nazwa usługi:</strong>
   <%= @service.name_services %>
 </p>
 
 <p>
-  <strong>Company price:</strong>
+  <strong>Cena firmowa:</strong>
   <%= @service.company_price %>
 </p>
 
 <p>
-  <strong>Doctor price:</strong>
+  <strong>Cena lekarza:</strong>
   <%= @service.doctor_price %>
 </p>
 
@@ -25,5 +25,5 @@
   <%= @service.date_out %>
 </p>
 
-<%= link_to 'Edit', edit_service_path(@service) %> |
-<%= link_to 'Back', services_path %>
+<%= link_to 'Edytuj', edit_service_path(@service) %> |
+<%= link_to 'Wstecz', services_path %>

@@ -1,20 +1,20 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Patients</h1>
+<h1>Lista pacjentów</h1>
 
 <table>
   <thead>
     <tr>
       <th>Pesel</th>
-      <th>Name patient</th>
-      <th>Firstname patient</th>
-      <th>Adress</th>
-      <th>City patient</th>
-      <th>Zip code patient</th>
-      <th>Phone patient</th>
+      <th>Imię pacjenta</th>
+      <th>Nazwisko pacjenta</th>
+      <th>Adres</th>
+      <th>Miasto pacjenta</th>
+      <th>Kod pocztowy pacjenta</th>
+      <th>Telefon pacjenta</th>
       <th>Patient card nr</th>
-      <th>Icd10code</th>
-      <th>Id insurer</th>
+      <th>Kod ICD10</th>
+      <th>Ubezpieczyciel</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -32,9 +32,9 @@
         <td><%= patient.patient_card_nr %></td>
         <td><%= patient.ICD10code %></td>
         <td><%= patient.insurer_id %></td>
-        <td><%= link_to 'Show', patient %></td>
-        <td><%= link_to 'Edit', edit_patient_path(patient) %></td>
-        <td><%= link_to 'Destroy', patient, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Pokaż', patient %></td>
+        <td><%= link_to 'Edytuj', edit_patient_path(patient) %></td>
+        <td><%= link_to 'Usuń', patient, method: :delete, data: { confirm: 'Masz pewność?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -42,4 +42,4 @@
 
 <br>
 
-<%= link_to 'New Patient', new_patient_path %>
+<%= link_to 'Nowy pacjent', new_patient_path %>

@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Appointments</h1>
+<h1>Lista wizyt</h1>
 
 <table>
   <thead>
@@ -24,9 +24,9 @@
         <td><%= appointment.id_services %></td>
         <td><%= appointment.data %></td>
         <td><%= appointment.id_doctor %></td>
-        <td><%= link_to 'Show', appointment %></td>
-        <td><%= link_to 'Edit', edit_appointment_path(appointment) %></td>
-        <td><%= link_to 'Destroy', appointment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Pokaż', appointment %></td>
+        <td><%= link_to 'Edytuj', edit_appointment_path(appointment) %></td>
+        <td><%= link_to 'Zniszcz', appointment, method: :delete, data: { confirm: 'Masz pewność?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -34,4 +34,4 @@
 
 <br>
 
-<%= link_to 'New Appointment', new_appointment_path %>
+<%= link_to 'Dodaj wizytę', new_appointment_path %>
