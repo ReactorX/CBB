@@ -24,9 +24,9 @@
         <td><%= appointment.data %></td>
 
         <td><%= appointment.doctor_id %></td>
-        <td><%= link_to 'Show', appointment %></td>
-        <td><%= link_to 'Edit', edit_appointment_path(appointment) %></td>
-        <td><%= link_to 'Destroy', appointment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Pokaż', appointment %></td>
+        <td><%= link_to 'Edytuj', edit_appointment_path(appointment) %></td>
+        <td><%= link_to 'Usuń', appointment, method: :delete, data: { confirm: 'Czy masz pewność?' } %></td>
 
       </tr>
     <% end %>
