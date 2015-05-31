@@ -10551,26 +10551,22 @@
 				"sPrevious": "Poprzedni"
 			},
 	
-			/**
-			 * This string is shown in preference to `zeroRecords` when the table is
-			 * empty of data (regardless of filtering). Note that this is an optional
-			 * parameter - if it is not given, the value of `zeroRecords` will be used
-			 * instead (either the default or given value).
-			 *  @type string
-			 *  @default Brak wprowadzonych danych.
-			 *
-			 *  @dtopt Language
-			 *  @name DataTable.defaults.language.emptyTable
-			 *
-			 *  @example
-			 *    $(document).ready( function() {
-			 *      $('#example').dataTable( {
-			 *        "language": {
-			 *          "emptyTable": "No data available in table"
-			 *        }
-			 *      } );
-			 *    } );
-			 */
+			
+			   @type string
+			   @default Brak wprowadzonych danych.
+			 
+			   @dtopt Language
+			   @name DataTable.defaults.language.emptyTable
+			 
+			   @example
+			     $(document).ready( function() {
+			       $('#example').dataTable( {
+			         "language": {
+			           "emptyTable": "No data available in table"
+			         }
+			       } );
+			     } );
+			 
 			"sEmptyTable": "Brak danych do wyświetlenia",
 	
 	
