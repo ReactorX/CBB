@@ -22,7 +22,7 @@
         <td><%= doctor.pwz_number %></td>
         <td><%= doctor.name %></td>
         <td><%= doctor.surname %></td>
-        <td><%= link_to 'Edit', edit_doctor_path(doctor), class:"btn btn-success"  %> <%= link_to 'Destroy', doctor, method: :delete, data: { confirm: 'Jesteś pewien?' },class:"btn btn-danger" %></td>
+        <td><%= link_to 'Edytuj', edit_doctor_path(doctor), class:"btn btn-success"  %> <%= link_to 'Usuń', doctor, method: :delete, data: { confirm: 'Jesteś pewien?' },class:"btn btn-danger" %></td>
       </tr>
     <% end %>
   </tbody>

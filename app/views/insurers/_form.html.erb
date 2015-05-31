@@ -1,7 +1,7 @@
 <%= form_for(@insurer) do |f| %>
   <% if @insurer.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@insurer.errors.count, "error") %> prohibited this insurer from being saved:</h2>
+      <h2><%= pluralize(@insurer.errors.count, "error") %> Nie udało się zapisać ubezpieczyciela:</h2>
 
       <ul>
       <% @insurer.errors.full_messages.each do |message| %>
