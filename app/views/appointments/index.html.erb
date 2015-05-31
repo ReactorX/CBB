@@ -1,20 +1,26 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Lista wizyt</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Id user</th>
-      <th>Id patient</th>
-      <th>Id services</th>
+        <%= link_to 'Dodaj wizytę', new_appointment_path, class: "btn btn-primary"  %><BR><BR><BR>
+           <div class="row">
+                <div class="col-md-12">
+                    <!-- Advanced Tables -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                             Lista umówionych wizyt
+                        </div>
+                        <div class="panel-body">
+                            <div class="table-responsive">
+                                <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+                                    <thead>
+                                        <tr>
+     <th>Użytkownik</th>
+      <th>Pacjent</th>
+      <th>Usługa</th>
       <th>Data</th>
-      <th>Id doctor</th>
+      <th>Lekarz</th>
       <th colspan="3"></th>
-    </tr>
-  </thead>
 
-  <tbody>
+ </tr>
+       </thead>
+          <tbody>
     <% @appointments.each do |appointment| %>
       <tr>
      
@@ -24,15 +30,21 @@
         <td><%= appointment.data %></td>
 
         <td><%= appointment.doctor_id %></td>
-        <td><%= link_to 'Pokaż', appointment %></td>
-        <td><%= link_to 'Edytuj', edit_appointment_path(appointment) %></td>
-        <td><%= link_to 'Usuń', appointment, method: :delete, data: { confirm: 'Czy masz pewność?' } %></td>
 
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+        <td><%= link_to 'Edytuj', edit_appointment_path(appointment), class:"btn btn-success" %> <%= link_to 'Usuń', appointment, method: :delete, data: { confirm: 'Czy masz pewność?' },class:"btn btn-danger" %></td>
+ </tr>
+                                       
+                                        <% end %>
+                                       
+                                    </tbody>
+                                </table>
+                            </div>
+                            
+                        </div>
+                    </div>
+            </div>
+    </div>
 
 <br>
 
-<%= link_to 'Dodaj wizytę', new_appointment_path %>
+

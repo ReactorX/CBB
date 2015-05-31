@@ -1,31 +1,38 @@
-<p id="notice"><%= notice %></p>
+<div class="panel panel-default">
+<div class="panel-heading"> 
+Wyedytowano dane</div>
+<div class="panel-body"> 
 
+<table class="table table-condensed">
+<thead>
+<tr>
+   <th>Użytkownik</th>
+      <th>Pacjent</th>
+      <th>Usługa</th>
+      <th>Data</th>
+      <th>Lekarz</th>
+  </tr>
+</thead>
+<tbody>
+  </tr>
+<td>
+  <%= @appointment.user_id %></td>
+<td>
+  <%= @appointment.patient_id %></td>
+<td>
+  <%= @appointment.service_id %></td>
+<td>
+  <%= @appointment.data %></td>
+<td>
+  <%= @appointment.doctor_id %></td>
+</td>
 
+</tr> 
+</tbody>
+</table>
+</div>
+<div class="panel-footer">
 
-<p>
-  <strong>Id user:</strong>
-  <%= @appointment.user_id %>
-</p>
-
-<p>
-  <strong>Id patient:</strong>
-  <%= @appointment.patient_id %>
-</p>
-
-<p>
-  <strong>Id services:</strong>
-  <%= @appointment.service_id %>
-</p>
-
-<p>
-  <strong>Data:</strong>
-  <%= @appointment.data %>
-</p>
-
-<p>
-  <strong>Id doctor:</strong>
-  <%= @appointment.doctor_id %>
-</p>
-
-<%= link_to 'Edytuj', edit_appointment_path(@appointment) %> |
-<%= link_to 'Wstecz', appointments_path %>
+<%= link_to 'Edytuj', edit_appointment_path(@appointment), class:"btn btn-success" %> 
+<%= link_to 'Wstecz', appointments_path, class:"btn btn-info" %>
+</div></div>

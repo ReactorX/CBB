@@ -12,27 +12,27 @@
   <% end %>
 
  
-  <div class="field">
-    <%= f.label :user_id %><br>
+ <div class="form-group input-group">                                  
+    <span class="input-group-addon">Dane użytkownika</span>
     <%= f.collection_select(:user_id, User.all, :id, :email) %>
   </div>
-  <div class="field">
-    <%= f.label :patient_id %><br>
+ <div class="form-group input-group">                                  
+    <span class="input-group-addon">Dance pacjenta</span>
     <%= f.collection_select(:patient_id, Patient.all, :id, :name_patient) %>
   </div>
-  <div class="field">
-    <%= f.label :services_is %><br>
+ <div class="form-group input-group">                                  
+    <span class="input-group-addon">Usługa lekarska</span>
      <%= f.collection_select(:service_id, Service.all, :id, :name_services) %>
   </div>
-  <div class="field">
-    <%= f.label :data %><br>
+ <div class="form-group input-group">                                  
+    <span class="input-group-addon">Data usługi</span>
     <%= f.date_select :data %>
   </div>
-  <div class="field">
-    <%= f.label :doctor_id %><br>
+ <div class="form-group input-group">                                  
+    <span class="input-group-addon">Imię i nazwisko lekarza</span>
     <%= f.collection_select(:doctor_id, Doctor.all, :id, :name) %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Wykonaj", class: "btn btn-primary" %>
   </div>
 <% end %>
