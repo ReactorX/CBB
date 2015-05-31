@@ -33,11 +33,13 @@
                                     <tbody>
                                      <% @insurers.each do |insurer| %>
                                         <tr class="odd gradeX">
-                                           <td><%= insurer.name_insurer %></td>
-                                           <td><%= insurer.adress %></td>
-                                           <td><%= insurer.zip_code_insurer %></td>
-                                           <td><%= insurer.city_insurer %></td>
-                                           <td><%= link_to 'Edytuj', edit_insurer_path(insurer), class:"btn btn-success" %> <%= link_to 'Usuń', insurer, method: :delete, data: { confirm: 'Jesteś pewien?' },class:"btn btn-danger"  %></td>
+                                <td><%= insurer.name_insurer %></td>
+                                <td><%= insurer.adress %></td>
+                                <td><%= insurer.zip_code_insurer %></td>
+                                <td><%= insurer.city_insurer %></td>
+                                <td><%= link_to 'Edytuj', edit_insurer_path(insurer), class:"btn btn-success" %>
+
+                                <%= link_to 'Usuń', insurer, method: :delete, data: { confirm: 'Jesteś pewien?' },class:"btn btn-danger"  %></td>
                                         </tr>
                                        
                                         <% end %>
@@ -48,6 +50,8 @@
                             
                         </div>
                     </div>
+            </div>
+    </div>
 
 <br>
 

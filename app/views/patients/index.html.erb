@@ -1,21 +1,23 @@
-<p id="notice"><%= notice %></p>
+<%= link_to 'Nowy pacjent', new_patient_path, class: "btn btn-primary"  %><BR><BR><BR>
 
-<h1>Lista pacjentów</h1>
-
-<table>
+            <div class="row">
+                <div class="col-md-12">
+                    <!-- Advanced Tables -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                             Lista pacjentów
+                        </div>
+                        <div class="panel-body">
+                            <div class="table-responsive">
+                                <table class="table table-striped table-bordered table-hover" id="dataTables-example">
   <thead>
-    <tr>
+                                        <tr class="odd gradeX">
       <th>Pesel</th>
       <th>Imię pacjenta</th>
       <th>Nazwisko pacjenta</th>
-      <th>Adres</th>
-      <th>Miasto pacjenta</th>
-      <th>Kod pocztowy pacjenta</th>
       <th>Telefon pacjenta</th>
-      <th>Patient card nr</th>
-      <th>Kod ICD10</th>
       <th>Ubezpieczyciel</th>
-      <th colspan="3"></th>
+      <th></th>
     </tr>
   </thead>
 
@@ -25,21 +27,23 @@
         <td><%= patient.pesel %></td>
         <td><%= patient.name_patient %></td>
         <td><%= patient.firstname_patient %></td>
-        <td><%= patient.adress %></td>
-        <td><%= patient.city_patient %></td>
-        <td><%= patient.zip_code_patient %></td>
         <td><%= patient.phone_patient %></td>
-        <td><%= patient.patient_card_nr %></td>
-        <td><%= patient.ICD10code %></td>
         <td><%= patient.insurer_id %></td>
-        <td><%= link_to 'Pokaż', patient %></td>
-        <td><%= link_to 'Edytuj', edit_patient_path(patient) %></td>
-        <td><%= link_to 'Usuń', patient, method: :delete, data: { confirm: 'Masz pewność?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
+        <td>
+<%= link_to 'Edytuj', edit_patient_path(patient), 
+class:"btn btn-success" %>
+<%= link_to 'Pokaż', patient, class:"btn btn-success" %>
+<%= link_to 'Usuń', patient, method: :delete, data: { confirm: 'Masz pewność?' }, class:"btn btn-danger" %></td>
+                                   </tr>
+                                       
+                                        <% end %>
+                                       
+                                    </tbody>
+                                </table>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    </div>
+                    </div>
 <br>
-
-<%= link_to 'Nowy pacjent', new_patient_path %>

@@ -1,29 +1,39 @@
-<p id="notice"><%= notice %></p>
+<div class="panel panel-default">
+<div class="panel-heading"> 
+Wyedytowano dane</div>
+<div class="panel-body"> 
 
-<p>
-  <strong>Nazwa usługi:</strong>
-  <%= @service.name_services %>
-</p>
+<table class="table table-condensed">
+<thead>
+<tr>
 
-<p>
-  <strong>Cena firmowa:</strong>
-  <%= @service.company_price %>
-</p>
+ <th>Nazwa usługi</th>
+      <th>Cena firmy</th>
+      <th>Cena lekarza</th>
+      <th>Date in</th>
+      <th>Date out</th>
+      <th></th>
 
-<p>
-  <strong>Cena lekarza:</strong>
-  <%= @service.doctor_price %>
-</p>
+</tr>
+</thead>
+<tbody>
+  </tr>
+<td>
+  <%= @service.name_services %></td>
+<td>
+  <%= @service.company_price %></td>
+<td>
+  <%= @service.doctor_price %></td>
+<td>
+  <%= @service.date_in %></td>
+<td>
+  <%= @service.date_out %></td>
 
-<p>
-  <strong>Date in:</strong>
-  <%= @service.date_in %>
-</p>
-
-<p>
-  <strong>Date out:</strong>
-  <%= @service.date_out %>
-</p>
-
-<%= link_to 'Edytuj', edit_service_path(@service) %> |
-<%= link_to 'Wstecz', services_path %>
+</tr> 
+</tbody>
+</table>
+</div>
+<div class="panel-footer">
+<%= link_to 'Edytuj', edit_service_path(@service), class:"btn btn-success" %>
+<%= link_to 'Wstecz', services_path, class:"btn btn-info" %>
+</div></div>

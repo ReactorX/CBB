@@ -1,21 +1,42 @@
-<p id="notice"><%= notice %></p>
+<div class="panel panel-default">
+<div class="panel-heading"> 
+Karta pacjenta</div>
+<div class="panel-body"> 
 
-<p>
-  <strong>Pesel:</strong>
-  <%= @patient.pesel %>
-</p>
 
-<p>
+<ul class="nav nav-tabs" role="tablist">
+<li class="active"><a href="#1zakladka" role="tab" data-toggle="tab">Dane pacjenta</a></li>
+<li><a href="#2zakladka" role="tab" data-toggle="tab">Adres zamieszkania</a></li>
+<li><a href="#3zakladka" role="tab" data-toggle="tab">Ubezpieczenie</a></li>
+</ul>
+ 
+<!-- Zawartość zakładek -->
+<div class="tab-content">
+<div class="tab-pane active" id="1zakladka">
+  <p>
   <strong>Imię pacjenta:</strong>
   <%= @patient.name_patient %>
 </p>
-
 <p>
   <strong>Nazwisko pacjenta:</strong>
   <%= @patient.firstname_patient %>
 </p>
+<p>
+  <strong>Pesel:</strong>
+  <%= @patient.pesel %>
+</p>
+<p>
+  <strong>Telefon pacjenta:</strong>
+  <%= @patient.phone_patient %>
+</p>
 
 <p>
+  <strong>Numer karty pacjenta:</strong>
+  <%= @patient.patient_card_nr %>
+</p>
+</div>
+<div class="tab-pane" id="2zakladka">
+  <p>
   <strong>Adres:</strong>
   <%= @patient.adress %>
 </p>
@@ -30,17 +51,10 @@
   <%= @patient.zip_code_patient %>
 </p>
 
-<p>
-  <strong>Telefon pacjenta:</strong>
-  <%= @patient.phone_patient %>
-</p>
 
-<p>
-  <strong>Numer karty pacjenta:</strong>
-  <%= @patient.patient_card_nr %>
-</p>
-
-<p>
+</div>
+<div class="tab-pane" id="3zakladka">
+  <p>
   <strong>Icd10code:</strong>
   <%= @patient.ICD10code %>
 </p>
@@ -50,5 +64,16 @@
   <%= @patient.insurer_id %>
 </p>
 
-<%= link_to 'Edytuj', edit_patient_path(@patient) %> |
-<%= link_to 'Wstecz', patients_path %>
+
+</div>
+</div></div>
+<div class="panel-footer">
+
+
+
+
+<%= link_to 'Edytuj', edit_patient_path(@patient), class:"btn btn-success" %> 
+<%= link_to 'Wstecz', patients_path, class:"btn btn-info" %>
+  
+</div>
+</div> 

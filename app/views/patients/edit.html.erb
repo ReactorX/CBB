@@ -1,6 +1,12 @@
-<h1>Edytuj pacjenta</h1>
+<div class="panel panel-default">
+<div class="panel-heading"> 
+Edytuj pacjenta</div>
+<div class="panel-body"> 
+ <div class="col-lg-6">
 
 <%= render 'form' %>
-
-<%= link_to 'Pokaż', @patient %> |
-<%= link_to 'Wstecz', patients_path %>
+</div></div>
+<div class="panel-footer">
+<%= link_to 'Pokaż', @patient, class:"btn btn-success" %> 
+<%= link_to 'Wstecz', patients_path, class:"btn btn-success" %>
+</div></div>

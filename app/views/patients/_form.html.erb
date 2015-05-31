@@ -12,47 +12,48 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :Pesel %><br>
-    <%= f.number_field :pesel %>
+ <div class="form-group input-group">         
+    <span class="input-group-addon">PESEL Pacjenta</span>
+    <%= f.number_field :pesel, class: "form-control"  %>
   </div>
-  <div class="field">
-    <%= f.label :Imię_pacjenta %><br>
-    <%= f.text_field :name_patient %>
+ <div class="form-group input-group">
+    <span class="input-group-addon">Imię pacjenta</span>
+    <%= f.text_field :name_patient, class: "form-control"  %>
   </div>
-  <div class="field">
-    <%= f.label :Nazwisko_pacjenta %><br>
-    <%= f.text_field :firstname_patient %>
+ <div class="form-group input-group">
+    <span class="input-group-addon">Nazwisko pacjenta</span>
+    <%= f.text_field :firstname_patient, class: "form-control"  %>
   </div>
-  <div class="field">
-    <%= f.label :Adres %><br>
-    <%= f.text_field :adress %>
+ <div class="form-group input-group">
+    <span class="input-group-addon">Adres zamieszkania</span>
+    <%= f.text_field :adress, class: "form-control"  %>
   </div>
-  <div class="field">
-    <%= f.label :Miasto_pacjenta %><br>
-    <%= f.text_field :city_patient %>
+ <div class="form-group input-group">
+    <span class="input-group-addon">Miasto</span>
+    <%= f.text_field :city_patient, class: "form-control"  %>
   </div>
-  <div class="field">
-    <%= f.label :Kod_pocztowy_pacjenta %><br>
-    <%= f.text_field :zip_code_patient %>
+ <div class="form-group input-group">
+    <span class="input-group-addon">Kod pocztowy</span>
+    <%= f.text_field :zip_code_patient, class: "form-control"  %>
   </div>
-  <div class="field">
-    <%= f.label :Telefon_pacjenta %><br>
-    <%= f.text_field :phone_patient %>
+ <div class="form-group input-group">
+    <span class="input-group-addon">Numer telefonu</span>
+    <%= f.text_field :phone_patient, class: "form-control"  %>
   </div>
-  <div class="field">
-    <%= f.label :patient_card_nr %><br>
-    <%= f.number_field :patient_card_nr %>
+ <div class="form-group input-group">
+    <span class="input-group-addon">Numer karty pacjenta</span>
+    <%= f.number_field :patient_card_nr, class: "form-control"  %>
   </div>
-  <div class="field">
-    <%= f.label :Kod_ICD10 %><br>
-    <%= f.text_field :ICD10code %>
+ <div class="form-group input-group">
+    <span class="input-group-addon">ICD10code pacjenta</span>
+    <%= f.text_field :ICD10code, class: "form-control"  %>
   </div>
-  <div class="field">
+ <div class="form-group input-group">                                  
+    <span class="input-group-addon">Nazwa ubezpieczyciela</span>
     <%= f.collection_select(:insurer_id, Insurer.all, :id, :name_insurer) %>
     <%#= f.select :insurer_id %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Wykonaj", class: "btn btn-primary" %>
   </div>
 <% end %>

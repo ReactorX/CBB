@@ -11,33 +11,35 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :Nazwa_usługi %><br>
-    <%= f.text_field :name_services %>
+ <div class="form-group input-group">                                  
+    <span class="input-group-addon">Nazwa usługi</span>
+    <%= f.text_field :name_services, class: "form-control" %>
   </div>
-  <div class="field">
-    <%= f.label :Cena_firmy %><br>
-    <%= f.text_field :company_price %>
+ <div class="form-group input-group">                                  
+    <span class="input-group-addon">Cena usługi wg. kliniki</span>
+    <%= f.text_field :company_price, class: "form-control" %>
   </div>
-  <div class="field">
-    <%= f.label :Cena_lekarza %><br>
-    <%= f.text_field :doctor_price %>
+ <div class="form-group input-group">                                  
+    <span class="input-group-addon">Cena usługi wg. lekarza</span>
+    <%= f.text_field :doctor_price, class: "form-control" %>
   </div>
-  <div class="field">
-    <%= f.label :date_in %><br>
-    <%= f.date_select :date_in %>
+
+ <div class="form-group input-group">                                  
+    <span class="input-group-addon">Data początkowa</span>
+    <%= f.date_select :date_in, class: "form-control" %>
   </div>
-  <div class="field">
-    <%= f.label :date_out %><br>
-    <%= f.date_select :date_out %>
+ <div class="form-group input-group">                                  
+    <span class="input-group-addon">Data końcowa</span>
+    <%= f.date_select :date_out, class: "form-control" %>
   </div>
- <div class="field">
+ <div class="form-group input-group">                                  
+    <span class="input-group-addon">Kategoria usługi</span>
     <%= f.collection_select(:category_id, Category.all, :id, :name_category) %>
     <%#= f.select :insurer_id %>
   </div>
  
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Wykonaj", class: "btn btn-primary" %>
   </div>
 <% end %>

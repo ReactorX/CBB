@@ -54,7 +54,7 @@ if ($.fn.dataTable.Api) {
                                 '' : ' disabled');
                             break;
 
-                        case 'previous':
+                        case 'Poprzedni':
                             btnDisplay = lang.sPrevious;
                             btnClass = button + (page > 0 ?
                                 '' : ' disabled');
@@ -139,7 +139,7 @@ if ($.fn.dataTable.Api) {
 
                 $(nPaging).append(
                     '<ul class="pagination">' +
-                    '<li class="prev disabled"><a href="#">&larr; ' + oLang.sPrevious + '</a></li>' +
+                    '<li class="prev disabled"><a href="#">&larr; ' + oLang.sPrevious + 'aaa</a></li>' +
                     '<li class="next disabled"><a href="#">' + oLang.sNext + ' &rarr; </a></li>' +
                     '</ul>'
                 );
