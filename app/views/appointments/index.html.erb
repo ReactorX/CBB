@@ -5,7 +5,6 @@
 <table>
   <thead>
     <tr>
-      <th>Id clinic</th>
       <th>Id user</th>
       <th>Id patient</th>
       <th>Id services</th>
@@ -18,15 +17,17 @@
   <tbody>
     <% @appointments.each do |appointment| %>
       <tr>
-        <td><%= appointment.id_clinic %></td>
-        <td><%= appointment.id_user %></td>
-        <td><%= appointment.id_patient %></td>
-        <td><%= appointment.id_services %></td>
+     
+        <td><%= appointment.user_id %></td>
+        <td><%= appointment.patient_id %></td>
+        <td><%= appointment.service_id %></td>
         <td><%= appointment.data %></td>
-        <td><%= appointment.id_doctor %></td>
-        <td><%= link_to 'Pokaż', appointment %></td>
-        <td><%= link_to 'Edytuj', edit_appointment_path(appointment) %></td>
-        <td><%= link_to 'Zniszcz', appointment, method: :delete, data: { confirm: 'Masz pewność?' } %></td>
+
+        <td><%= appointment.doctor_id %></td>
+        <td><%= link_to 'Show', appointment %></td>
+        <td><%= link_to 'Edit', edit_appointment_path(appointment) %></td>
+        <td><%= link_to 'Destroy', appointment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
       </tr>
     <% end %>
   </tbody>

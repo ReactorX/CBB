@@ -10,6 +10,7 @@ class CreatePatients < ActiveRecord::Migration
       t.string :phone_patient
       t.integer :patient_card_nr
       t.string :ICD10code
+      t.integer :insurer_id
       t.timestamps null: false
     end
   add_foreign_key :patients, :insurers

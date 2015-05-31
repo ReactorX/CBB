@@ -6,8 +6,10 @@ class CreateServices < ActiveRecord::Migration
       t.string :doctor_price
       t.date :date_in
       t.date :date_out
-
+      t.integer :category_id
       t.timestamps null: false
+     
     end
+      add_foreign_key :services, :categories
   end
 end

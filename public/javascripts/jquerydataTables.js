@@ -2373,7 +2373,7 @@
 			order:   [],
 			start:   displayStart,
 			length:  displayLength,
-			search:  {
+			szukaj:  {
 				value: preSearch.sSearch,
 				regex: preSearch.bRegex
 			}
@@ -2389,7 +2389,7 @@
 				name:       column.sName,
 				searchable: column.bSearchable,
 				orderable:  column.bSortable,
-				search:     {
+				szukaj:     {
 					value: columnSearch.sSearch,
 					regex: columnSearch.bRegex
 				}
@@ -4942,7 +4942,7 @@
 		 *      // Filter to rows with 'Webkit' in them, add a background colour and then
 		 *      // remove the filter, thus highlighting the 'Webkit' rows only.
 		 *      oTable.fnFilter('Webkit');
-		 *      oTable.$('tr', {"search": "applied"}).css('backgroundColor', 'blue');
+		 *      oTable.$('tr', {"szukaj": "applied"}).css('backgroundColor', 'blue');
 		 *      oTable.fnFilter('');
 		 *    } );
 		 */
@@ -4994,7 +4994,7 @@
 		 *
 		 *      // Filter to 'Webkit' and get all data for
 		 *      oTable.fnFilter('Webkit');
-		 *      var data = oTable._('tr', {"search": "applied"});
+		 *      var data = oTable._('tr', {"szukaj": "applied"});
 		 *
 		 *      // Do something with the data
 		 *      alert( data.length+" rows matched the search" );
@@ -10305,8 +10305,8 @@
 		 *        "serverSide": true,
 		 *        "ajax": "scripts/server_processing.php",
 		 *        "deferLoading": [ 57, 100 ],
-		 *        "search": {
-		 *          "search": "my_filter"
+		 *        "szukaj": {
+		 *          "szukaj": "my_filter"
 		 *        }
 		 *      } );
 		 *    } );
@@ -10603,7 +10603,7 @@
 			 *      } );
 			 *    } );
 			 */
-			"sInfo": "Showing _START_ to _END_ of _TOTAL_ entries",
+			"sInfo": "Showing _START_ to _END_ of _TOTAL_ wyników",
 	
 	
 			/**
@@ -10624,7 +10624,7 @@
 			 *      } );
 			 *    } );
 			 */
-			"sInfoEmpty": "Showing 0 to 0 of 0 entries",
+			"sInfoEmpty": "Pokaż 0  0 z 0 wyników",
 	
 	
 			/**
@@ -10881,7 +10881,7 @@
 		 *  @example
 		 *    $(document).ready( function() {
 		 *      $('#example').dataTable( {
-		 *        "search": {"search": "Initial search"}
+		 *        "search": {"Szukaj": "Initial search"}
 		 *      } );
 		 *    } )
 		 */

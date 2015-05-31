@@ -1,23 +1,20 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Id clinic:</strong>
-  <%= @appointment.id_clinic %>
-</p>
+
 
 <p>
   <strong>Id user:</strong>
-  <%= @appointment.id_user %>
+  <%= @appointment.user_id %>
 </p>
 
 <p>
   <strong>Id patient:</strong>
-  <%= @appointment.id_patient %>
+  <%= @appointment.patient_id %>
 </p>
 
 <p>
   <strong>Id services:</strong>
-  <%= @appointment.id_services %>
+  <%= @appointment.service_id %>
 </p>
 
 <p>
@@ -27,7 +24,7 @@
 
 <p>
   <strong>Id doctor:</strong>
-  <%= @appointment.id_doctor %>
+  <%= @appointment.doctor_id %>
 </p>
 
 <%= link_to 'Edytuj', edit_appointment_path(@appointment) %> |
