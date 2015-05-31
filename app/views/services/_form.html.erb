@@ -31,6 +31,12 @@
     <%= f.label :date_out %><br>
     <%= f.date_select :date_out %>
   </div>
+ <div class="field">
+    <%= f.collection_select(:category_id, Category.all, :id, :name_category) %>
+    <%#= f.select :insurer_id %>
+  </div>
+ 
+
   <div class="actions">
     <%= f.submit %>
   </div>

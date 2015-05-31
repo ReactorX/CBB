@@ -11,29 +11,26 @@
     </div>
   <% end %>
 
+ 
   <div class="field">
-    <%= f.label :id_clinic %><br>
-    <%= f.number_field :id_clinic %>
+    <%= f.label :user_id %><br>
+    <%= f.collection_select(:user_id, User.all, :id, :email) %>
   </div>
   <div class="field">
-    <%= f.label :id_user %><br>
-    <%= f.number_field :id_user %>
+    <%= f.label :patient_id %><br>
+    <%= f.collection_select(:patient_id, Patient.all, :id, :name_patient) %>
   </div>
   <div class="field">
-    <%= f.label :id_patient %><br>
-    <%= f.number_field :id_patient %>
-  </div>
-  <div class="field">
-    <%= f.label :id_services %><br>
-    <%= f.text_field :id_services %>
+    <%= f.label :services_is %><br>
+     <%= f.collection_select(:service_id, Service.all, :id, :name_services) %>
   </div>
   <div class="field">
     <%= f.label :data %><br>
     <%= f.date_select :data %>
   </div>
   <div class="field">
-    <%= f.label :id_doctor %><br>
-    <%= f.number_field :id_doctor %>
+    <%= f.label :doctor_id %><br>
+    <%= f.collection_select(:doctor_id, Doctor.all, :id, :name) %>
   </div>
   <div class="actions">
     <%= f.submit %>

@@ -145,7 +145,7 @@ if ($.fn.dataTable.Api) {
                 );
                 var els = $('a', nPaging);
                 $(els[0]).bind('click.DT', {
-                    action: "previous"
+                    action: "ff"
                 }, fnClickHandler);
                 $(els[1]).bind('click.DT', {
                     action: "next"

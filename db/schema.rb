@@ -11,18 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150529053959) do
-
-  create_table "appointments", force: :cascade do |t|
-    t.integer  "id_clinic",   limit: 4
-    t.integer  "id_user",     limit: 4
-    t.integer  "id_patient",  limit: 4
-    t.string   "id_services", limit: 255
-    t.date     "data"
-    t.integer  "id_doctor",   limit: 4
-    t.datetime "created_at",              null: false
-    t.datetime "updated_at",              null: false
-  end
+ActiveRecord::Schema.define(version: 20150530233952) do
 
   create_table "archives", force: :cascade do |t|
     t.integer  "id_appointments", limit: 4
@@ -116,9 +105,12 @@ ActiveRecord::Schema.define(version: 20150529053959) do
     t.string   "doctor_price",  limit: 255
     t.date     "date_in"
     t.date     "date_out"
+    t.integer  "category_id",   limit: 4
     t.datetime "created_at",                null: false
     t.datetime "updated_at",                null: false
   end
+
+  add_index "services", ["category_id"], name: "fk_rails_5a36fd9326", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  limit: 255, default: "", null: false
@@ -139,4 +131,5 @@ ActiveRecord::Schema.define(version: 20150529053959) do
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
   add_foreign_key "patients", "insurers", name: "my_foreign_key"
+  add_foreign_key "services", "categories"
 end
