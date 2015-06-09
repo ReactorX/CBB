@@ -93,7 +93,7 @@ ActiveRecord::Schema.define(version: 20150531690945) do
   end
 
   create_table "patients", force: :cascade do |t|
-    t.integer  "pesel",             limit: 4
+    t.string   "pesel",             limit: 50
     t.string   "name_patient",      limit: 255
     t.string   "firstname_patient", limit: 255
     t.string   "adress",            limit: 255

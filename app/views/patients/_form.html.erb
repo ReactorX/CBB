@@ -14,39 +14,39 @@
 
  <div class="form-group input-group">         
     <span class="input-group-addon">PESEL Pacjenta</span>
-    <%= f.number_field :pesel, class: "form-control"  %>
+    <%= f.number_field :pesel, class: "form-control", placeholder: "np. 92050847536"  %>
   </div>
  <div class="form-group input-group">
     <span class="input-group-addon">Imię pacjenta</span>
-    <%= f.text_field :name_patient, class: "form-control"  %>
+    <%= f.text_field :name_patient, class: "form-control", placeholder: "Imię pacjenta"  %>
   </div>
  <div class="form-group input-group">
     <span class="input-group-addon">Nazwisko pacjenta</span>
-    <%= f.text_field :firstname_patient, class: "form-control"  %>
+    <%= f.text_field :firstname_patient, class: "form-control", placeholder: "np. Nazwisko pacjenta"  %>
   </div>
  <div class="form-group input-group">
     <span class="input-group-addon">Adres zamieszkania</span>
-    <%= f.text_field :adress, class: "form-control"  %>
+    <%= f.text_field :adress, class: "form-control", placeholder: "ul. ulica 0/00"  %>
   </div>
  <div class="form-group input-group">
     <span class="input-group-addon">Miasto</span>
-    <%= f.text_field :city_patient, class: "form-control"  %>
+    <%= f.text_field :city_patient, class: "form-control", placeholder: "np. miejscowość"  %>
   </div>
  <div class="form-group input-group">
     <span class="input-group-addon">Kod pocztowy</span>
-    <%= f.text_field :zip_code_patient, class: "form-control"  %>
+    <%= f.text_field :zip_code_patient, class: "form-control", placeholder: "00-000"  %>
   </div>
  <div class="form-group input-group">
     <span class="input-group-addon">Numer telefonu</span>
-    <%= f.text_field :phone_patient, class: "form-control"  %>
+    <%= f.text_field :phone_patient, class: "form-control", placeholder: "np. 547 236 569"  %>
   </div>
  <div class="form-group input-group">
     <span class="input-group-addon">Numer karty pacjenta</span>
-    <%= f.number_field :patient_card_nr, class: "form-control"  %>
+    <%= f.number_field :patient_card_nr, class: "form-control", placeholder: "np. 7-mio cyfrowy kod"  %>
   </div>
  <div class="form-group input-group">
     <span class="input-group-addon">ICD10code pacjenta</span>
-    <%= f.text_field :ICD10code, class: "form-control"  %>
+    <%= f.text_field :ICD10code, class: "form-control", placeholder: ""  %>
   </div>
  <div class="form-group input-group">                                  
     <span class="input-group-addon">Nazwa ubezpieczyciela</span>
@@ -54,6 +54,6 @@
     <%#= f.select :insurer_id %>
   </div>
   <div class="actions">
-    <%= f.submit "Wykonaj", class: "btn btn-primary" %>
+    <%= f.submit "Wykonaj", class: "btn btn-primary", :style =>'color:white;' %>
   </div>
 <% end %>

@@ -1,3 +1,9 @@
+<ol class="breadcrumb">
+<li><%= link_to "Strona Główna", :back, :style =>'background:none;' %></li>
+<li ><a style="background:none;" href="#">Lista ubezpieczycieli</a></li>
+</ol> 
+
+
 <div class="panel panel-default">
 <div class="panel-heading"> 
 Nowa firma Ubezpieczeniowa</div>
@@ -7,5 +13,5 @@ Nowa firma Ubezpieczeniowa</div>
 <%= render 'form' %>
 </div></div>
 <div class="panel-footer">
-<%= link_to 'Wróć', insurers_path, class:"btn btn-info" %>
+<%= link_to 'Wróć', insurers_path, class:"btn btn-info", :style =>'color:white;' %>
 </div></div>

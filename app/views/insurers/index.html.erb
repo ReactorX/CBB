@@ -1,10 +1,10 @@
 <ol class="breadcrumb">
-<li><%= link_to "Strona Główna", :back, {:style =>'color:#428BCA'} %></li>
-<li class="color:#428BCA"><a  href="#">Lista ubezpieczycieli</a></li>
+<li><%= link_to "Strona Główna", :back, :style =>'background:none;' %></li>
+<li ><a style="background:none;" href="#">Lista ubezpieczycieli</a></li>
 </ol> 
 
 
-<%= link_to 'Dodaj nowego ubezpieczyciela', new_insurer_path, class: "btn btn-primary"  %><BR><BR><BR>
+<%= link_to 'Dodaj nowego ubezpieczyciela', new_insurer_path, class: "btn btn-primary", :style =>'color:white;'  %><BR><BR><BR>
 
 
 
@@ -25,7 +25,6 @@
                                         <tr>
                                             <th>Nazwa placówki</th>
                                             <th>Adres placówki</th>
-                                            <th>kod ZIP firmy</th>
                                             <th>Miejscowość</th>
                                             <th></th>
                                         </tr>
@@ -35,11 +34,10 @@
                                         <tr class="odd gradeX">
                                 <td><%= insurer.name_insurer %></td>
                                 <td><%= insurer.adress %></td>
-                                <td><%= insurer.zip_code_insurer %></td>
                                 <td><%= insurer.city_insurer %></td>
-                                <td><%= link_to 'Edytuj', edit_insurer_path(insurer), class:"btn btn-success" %>
+                                <td><%= link_to 'Edytuj', edit_insurer_path(insurer), class:"btn btn-success", :style =>'color:white;;' %>
 
-                                <%= link_to 'Usuń', insurer, method: :delete, data: { confirm: 'Jesteś pewien?' },class:"btn btn-danger"  %></td>
+                                <%= link_to 'Usuń', insurer, method: :delete, data: { confirm: 'Jesteś pewien?' },class:"btn btn-danger",:style =>'color:white;;'   %></td>
                                         </tr>
                                        
                                         <% end %>

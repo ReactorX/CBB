@@ -1,4 +1,4 @@
-        <%= link_to 'Dodaj wizytę', new_appointment_path, class: "btn btn-primary"  %><BR><BR><BR>
+        <%= link_to 'Dodaj wizytę', new_appointment_path, class: "btn btn-primary", :style =>'color:white;'  %><BR><BR><BR>
            <div class="row">
                 <div class="col-md-12">
                     <!-- Advanced Tables -->
@@ -24,14 +24,14 @@
     <% @appointments.each do |appointment| %>
       <tr>
      
-        <td><%= appointment.user_id %></td>
-        <td><%= appointment.patient_id %></td>
-        <td><%= appointment.service_id %></td>
+        <td><%= appointment.user.email %></td>
+        <td><%= appointment.patient.name_patient %> <%= appointment.patient.firstname_patient %></td>
+        <td><%= appointment.service.name_services %></td>
         <td><%= appointment.data %></td>
 
-        <td><%= appointment.doctor_id %></td>
+        <td><%= appointment.doctor.name %> <%= appointment.doctor.surname %></td>
 
-        <td><%= link_to 'Edytuj', edit_appointment_path(appointment), class:"btn btn-success" %> <%= link_to 'Usuń', appointment, method: :delete, data: { confirm: 'Czy masz pewność?' },class:"btn btn-danger" %></td>
+        <td><%= link_to 'Edytuj', edit_appointment_path(appointment), class:"btn btn-success", :style =>'color:white;' %> <%= link_to 'Usuń', appointment, method: :delete, data: { confirm: 'Czy masz pewność?' },class:"btn btn-danger", :style =>'color:white;' %></td>
  </tr>
                                        
                                         <% end %>

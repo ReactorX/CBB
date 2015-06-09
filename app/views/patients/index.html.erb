@@ -1,4 +1,4 @@
-<%= link_to 'Nowy pacjent', new_patient_path, class: "btn btn-primary"  %><BR><BR><BR>
+<%= link_to 'Nowy pacjent', new_patient_path, class: "btn btn-primary", :style =>'color:white;'   %><BR><BR><BR>
 
             <div class="row">
                 <div class="col-md-12">
@@ -15,8 +15,7 @@
       <th>Pesel</th>
       <th>Imię pacjenta</th>
       <th>Nazwisko pacjenta</th>
-      <th>Telefon pacjenta</th>
-      <th>Ubezpieczyciel</th>
+
       <th></th>
     </tr>
   </thead>
@@ -27,13 +26,12 @@
         <td><%= patient.pesel %></td>
         <td><%= patient.name_patient %></td>
         <td><%= patient.firstname_patient %></td>
-        <td><%= patient.phone_patient %></td>
-        <td><%= patient.insurer_id %></td>
+
         <td>
 <%= link_to 'Edytuj', edit_patient_path(patient), 
-class:"btn btn-success" %>
-<%= link_to 'Pokaż', patient, class:"btn btn-success" %>
-<%= link_to 'Usuń', patient, method: :delete, data: { confirm: 'Masz pewność?' }, class:"btn btn-danger" %></td>
+class:"btn btn-success", :style =>'color:white;'  %>
+<%= link_to 'Pokaż', patient, class:"btn btn-success", :style =>'color:white;'  %>
+<%= link_to 'Usuń', patient, method: :delete, data: { confirm: 'Masz pewność?' }, class:"btn btn-danger", :style =>'color:white;'  %></td>
                                    </tr>
                                        
                                         <% end %>

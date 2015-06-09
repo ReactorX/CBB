@@ -4,7 +4,7 @@
 <li><%= link_to "Strona Główna", :back, {:style =>'color:#428BCA'} %></li>
 <li><a class="color:#428BCA" href="#">Lista lekarzy</a></li>
 </ol> 
-<%= link_to 'Dodaj nowego lekarza', new_doctor_path, class: "btn btn-primary" %>
+<%= link_to 'Dodaj nowego lekarza', new_doctor_path, class: "btn btn-primary", :style =>'color:white;' %>
 
 <table class="table table-striped">
   <thead>
@@ -22,7 +22,7 @@
         <td><%= doctor.pwz_number %></td>
         <td><%= doctor.name %></td>
         <td><%= doctor.surname %></td>
-        <td><%= link_to 'Edytuj', edit_doctor_path(doctor), class:"btn btn-success"  %> <%= link_to 'Usuń', doctor, method: :delete, data: { confirm: 'Jesteś pewien?' },class:"btn btn-danger" %></td>
+        <td><%= link_to 'Edytuj', edit_doctor_path(doctor), class:"btn btn-success", :style =>'color:white;'  %> <%= link_to 'Usuń', doctor, method: :delete, data: { confirm: 'Jesteś pewien?' },class:"btn btn-danger", :style =>'color:white;' %></td>
       </tr>
     <% end %>
   </tbody>

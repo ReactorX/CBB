@@ -1,4 +1,4 @@
-          <%= link_to 'Dodaj nową usługę', new_service_path, class: "btn btn-primary" %><BR><BR><BR>
+          <%= link_to 'Dodaj nową usługę', new_service_path, class: "btn btn-primary" , :style =>'color:white;'%><BR><BR><BR>
             <div class="row">
                 <div class="col-md-12">
                     <!-- Advanced Tables -->
@@ -14,8 +14,8 @@
       <th>Nazwa usługi</th>
       <th>Cena firmy</th>
       <th>Cena lekarza</th>
-      <th>Date in</th>
-      <th>Date out</th>
+      <th>Data wejścia</th>
+      <th>Data zakończenia</th>
       <th></th>
     </tr>
                                     </thead>
@@ -27,7 +27,7 @@
         <td><%= service.doctor_price %></td>
         <td><%= service.date_in %></td>
         <td><%= service.date_out %></td>
-        <td><%= link_to 'Edytuj', edit_service_path(service), class:"btn btn-success" %> <%= link_to 'Usuń', service, method: :delete, data: { confirm: 'Czy masz pewność?' },class:"btn btn-danger" %></td>
+        <td><%= link_to 'Edytuj', edit_service_path(service), class:"btn btn-success", :style =>'color:white;' %> <%= link_to 'Usuń', service, method: :delete, data: { confirm: 'Czy masz pewność?' },class:"btn btn-danger", :style =>'color:white;' %></td>
        </tr>
                                        
                                         <% end %>

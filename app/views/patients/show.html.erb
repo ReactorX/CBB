@@ -60,8 +60,8 @@ Karta pacjenta</div>
 </p>
 
 <p>
-  <strong>ID ubezpieczyciela:</strong>
-  <%= @patient.insurer_id %>
+  <strong>Nazwa ubezpieczyciela:</strong>
+  <%= @patient.insurer.name_insurer %>
 </p>
 
 
@@ -72,8 +72,8 @@ Karta pacjenta</div>
 
 
 
-<%= link_to 'Edytuj', edit_patient_path(@patient), class:"btn btn-success" %> 
-<%= link_to 'Wstecz', patients_path, class:"btn btn-info" %>
+<%= link_to 'Edytuj', edit_patient_path(@patient), class:"btn btn-success", :style =>'color:white;' %> 
+<%= link_to 'Wstecz', patients_path, class:"btn btn-info", :style =>'color:white;' %>
   
 </div>
 </div> 

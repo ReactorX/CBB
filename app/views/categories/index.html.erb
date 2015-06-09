@@ -1,9 +1,9 @@
 <ol class="breadcrumb">
-<li><%= link_to "Strona Główna", :back, {:style =>'color:#428BCA'} %></li>
+<li><%= link_to "Strona Główna", :style =>'color:white;' %></li>
 <li><a class="color:#428BCA;" href="#">Lista kategorii</a></li>
 </ol> 
 
-<%= link_to 'Dodaj nową kategorię', new_category_path, class: "btn btn-primary" %>
+<%= link_to 'Dodaj nową kategorię', new_category_path, class: "btn btn-primary", :style =>'color:white;' %>
 <table class="table table-striped">
   <thead>
     <tr>
@@ -18,7 +18,7 @@
       <tr>
      
         <td><%= category.name_category %></td>
-        <td><%= link_to 'Edytuj', edit_category_path(category), class:"btn btn-success" %> <%= link_to 'Usuń', category, method: :delete, data: { confirm: 'Jesteś pewien?' },class:"btn btn-danger" %></td>
+        <td><%= link_to 'Edytuj', edit_category_path(category), class:"btn btn-success", :style =>'color:white;' %> <%= link_to 'Usuń', category, method: :delete, data: { confirm: 'Jesteś pewien?' },class:"btn btn-danger", :style =>'color:white;' %></td>
       </tr>
     <% end %>
   </tbody>

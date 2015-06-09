@@ -1,7 +1,7 @@
 class CreatePatients < ActiveRecord::Migration
   def change
     create_table :patients do |t|
-      t.integer :pesel
+      t.string :pesel
       t.string :name_patient
       t.string :firstname_patient
       t.string :adress
